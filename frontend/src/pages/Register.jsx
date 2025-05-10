@@ -46,7 +46,7 @@ function Register() {
     try{
       // const { data } = await axios.post(
       const response = await axios.post(
-        "http://localhost:4001/api/users/register",
+        "BACKEND_URL/api/users/register",
         formData,
         {
           withCredentials: true,
