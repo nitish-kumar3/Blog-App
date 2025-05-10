@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useState } from "react";
 import toast from "react-hot-toast";
+import { BACKEND_URL } from "../utils/utils";
 
 function CreateBlog() {
   const [title, setTitle] = useState("");

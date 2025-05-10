@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import { BACKEND_URL } from "../utils/utils";
 
 function Creators() {
   const [creators, setCreators] = useState([]);

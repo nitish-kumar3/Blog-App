@@ -2,6 +2,8 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import toast from "react-hot-toast";
 import { useParams } from "react-router-dom";
+import { BACKEND_URL } from "../utils/utils";
+
 
 function Detail() {
   const { id } = useParams();
