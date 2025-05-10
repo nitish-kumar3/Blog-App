@@ -20,7 +20,7 @@ function Navbar() {
     e.preventDefault();
     try {
       const { data } = await axios.get(
-        `${BACKEND_URL}/users/logout`,
+        `${BACKEND_URL}/api/users/logout`,
         { withCredentials: true }
       );
       console.log(data);

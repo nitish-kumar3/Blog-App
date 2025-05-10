@@ -47,7 +47,7 @@ function Register() {
     try{
       // const { data } = await axios.post(
       const response = await axios.post(
-        `${BACKEND_URL}/users/register`,
+        `${BACKEND_URL}/api/users/register`,
         formData,
         {
           withCredentials: true,

@@ -8,7 +8,7 @@ function Creator() {
   useEffect(() => {
     const fetchAdmins = async () => {
       const { data } = await axios.get(
-        `${BACKEND_URL}/users/admins`,
+        `${BACKEND_URL}/api/users/admins`,
         {
           withCredentials: true,
         }
