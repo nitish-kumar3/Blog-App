@@ -26,7 +26,7 @@ function Sidebar({ setComponent }) {
     e.preventDefault();
     try {
       const { data } = await axios.get(
-        `${BACKEND_URL}/api/users/logout`,
+        `${BACKEND_URL}/users/logout`,
         { withCredentials: true }
       );
       toast.success(data.message);
