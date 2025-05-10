@@ -14,7 +14,6 @@ function Login() {
 
   const handleLogin = async (e) => {
     e.preventDefault();
-
     try {
       const { data } = await axios.post(
         "http://localhost:4001/api/users/login",
@@ -28,7 +27,7 @@ function Login() {
       );
       console.log(data);
       // Store the token in localStorage
-      localStorage.setItem("jwt", data.token); // storing token in localStorage so that if user refreshed the page it will not redirect again in login
+      localStorage.setItem("jwt", data.token);   //storing token in localStorage so that if user refreshed the page it will not redirect again in login
       toast.success(data.message || "User Logined successfully", {
         duration: 3000,
       });
@@ -97,8 +96,8 @@ function Login() {
                 placeholder="Your Email Address"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="w-full p-2  border rounded-md"
-              />
+                className="w-full p-2 border rounded-md"
+                />
             </div>
 
             <div className="mb-4">
@@ -107,7 +106,7 @@ function Login() {
                 placeholder="Your Password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                className="w-full p-2  border rounded-md"
+                className="w-full p-2 border rounded-md"
               />
             </div>
 
@@ -119,8 +118,7 @@ function Login() {
             </p>
             <button
               type="submit"
-              className="w-full p-2 bg-blue-500 hover:bg-blue-800 duration-300 rounded-md text-white"
-            >
+              className="w-full p-2 bg-blue-500 hover:bg-blue-800 duration-300 rounded-md text-white">
               Login
             </button>
           </form>

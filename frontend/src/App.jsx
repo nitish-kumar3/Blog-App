@@ -24,16 +24,13 @@ function App() {
   let token = localStorage.getItem("jwt"); // Retrieve the token directly from the localStorage to maininting the routes protect (Go to login.jsx)
   console.log(blogs);
   console.log(isAuthenticated); // it is not using because every page refresh it was redirected to /login
-
+ 
   return (
     <div>
       {!hideNavbarFooter && <Navbar />}
-      <Routes>
-        <Route
-          exact
-          path="/"
-          element={token ? <Home /> : <Navigate to={"/login"} />}
-        />
+      <Routes> 
+        <Route exact path="/"
+          element={token ? <Home /> : <Navigate to={"/login"} />} />
         <Route exact path="/blogs" element={<Blogs />} />
         <Route exact path="/about" element={<About />} />
         <Route exact path="/contact" element={<Contact />} />

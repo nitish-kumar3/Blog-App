@@ -27,8 +27,8 @@ function CreateBlog() {
     formData.append("title", title);
     formData.append("category", category);
     formData.append("about", about);
-
     formData.append("blogImage", blogImage);
+    
     try {
       const { data } = await axios.post(
         "http://localhost:4001/api/blogs/create",
@@ -54,7 +54,7 @@ function CreateBlog() {
   };
   return (
     <div>
-      <div className="min-h-screen  py-10">
+      <div className="min-h-screen py-10">
         <div className="max-w-4xl mx-auto p-6 border  rounded-lg shadow-lg">
           <h3 className="text-2xl font-semibold mb-8">Create Blog</h3>
           <form onSubmit={handleCreateBlog} className="space-y-6">

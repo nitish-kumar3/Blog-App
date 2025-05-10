@@ -6,7 +6,7 @@ import { useAuth } from "../context/AuthProvider";
 
 function Register() {
   const { setIsAuthenticated, setProfile } = useAuth();
-
+  
   const navigateTo = useNavigate();
 
   const [name, setName] = useState("");
@@ -32,7 +32,7 @@ function Register() {
   // const handleRegister = (e) => {
   const handleRegister = async (e) => {
     e.preventDefault();
- 
+
     const formData = new FormData();
     
     formData.append("name", name);
@@ -56,7 +56,7 @@ function Register() {
         }
       );
       console.log(response.data);
-      localStorage.setItem("jwt", JSON.stringify(response.data.token));
+      localStorage.setItem("jwt",JSON.stringify(response.data.token));
       // localStorage.setItem("jwt", response.data.token);   // // storing token in localStorage so that if user refreshed the page it will not redirect again in login
       toast.success(response.data.message || "User registered successfully");
       setProfile(response.data.user);
