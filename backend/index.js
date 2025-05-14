@@ -15,6 +15,7 @@ const port = process.env.PORT;
 const MONOGO_URL = process.env.MONOG_URI;
 
 //middleware
+// app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(cookieParser());
 app.use(

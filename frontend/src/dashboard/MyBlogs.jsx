@@ -24,7 +24,7 @@ function MyBlogs() {
 
   const handleDelete = async (id) => {
     await axios
-      .delete(`BACKEND_URL/api/blogs/delete/${id}`, {
+      .delete(`${BACKEND_URL}/api/blogs/delete/${id}`, {
         withCredentials: true,
       })
       .then((res) => {
