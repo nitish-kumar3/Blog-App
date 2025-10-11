@@ -3,7 +3,7 @@ import jwt from "jsonwebtoken";
 
 //Authentication
 export const isAuthenticated = async (req, res, next) => {
-  try {
+  try { 
     const token = req.cookies.jwt;
     console.log("Middleware : ", token);
     if (!token) {
