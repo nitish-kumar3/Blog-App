@@ -75,7 +75,7 @@ function Sidebar({ setComponent }) {
         <div className="text-center">
           <img
             className="w-24 h-24 rounded-full mx-auto mb-2"
-            src={profile?.user?.photo?.url}
+            src={profile?.photo?.url}    //here remove user from {profile?.user?.photo?.url} 
             alt=""
           />
           <p className="text-lg font-semibold">{profile?.user?.name}</p>

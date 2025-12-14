@@ -15,19 +15,44 @@ function Dashboard() {
   if (!isAuthenticated) {
     return <Navigate to={"/"} />;
   }
+
+  // return (
+  //   <div>
+  //     <div>
+  //       <Sidebar component={component} setComponent={setComponent} />
+  //       {component === "My Profile" ? ( <MyProfile /> ) : component === "Create Blog" ? ( <CreateBlog />
+  //       ) : component === "Update Blog" ? (
+  //         <UpdateBlog />
+  //       ) : (
+  //         <MyBlogs />
+  //       )}
+  //     </div>
+  //   </div>
+  // );
+
+
   return (
-    <div>
-      <div>
-        <Sidebar component={component} setComponent={setComponent} />
-        {component === "My Profile" ? ( <MyProfile /> ) : component === "Create Blog" ? ( <CreateBlog />
-        ) : component === "Update Blog" ? (
-          <UpdateBlog />
-        ) : (
-          <MyBlogs />
-        )}
-      </div>
+  <div className="min-h-screen flex bg-gray-100">
+    {/* LEFT SIDEBAR */}
+    <div className="w-64 bg-white shadow-lg">
+      <Sidebar component={component} setComponent={setComponent} />
     </div>
-  );
+
+    {/* RIGHT CONTENT */}
+    <div className="flex-1 p-6">
+      {component === "My Profile" ? (
+        <MyProfile />
+      ) : component === "Create Blog" ? (
+        <CreateBlog />
+      ) : component === "Update Blog" ? (
+        <UpdateBlog />
+      ) : (
+        <MyBlogs />
+      )}
+    </div>
+  </div>
+);
+
 }
 
 export default Dashboard;
