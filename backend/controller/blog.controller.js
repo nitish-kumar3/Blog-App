@@ -6,7 +6,6 @@ import { v2 as cloudinary } from "cloudinary";
 
 
 
-
 export const createBlog = async (req, res) => {
   try {
     if (!req.files || Object.keys(req.files).length === 0) {
