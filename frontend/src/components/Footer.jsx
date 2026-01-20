@@ -3,7 +3,6 @@ import { FaGithub } from "react-icons/fa";
 import { BsYoutube } from "react-icons/bs";
 import { FaLinkedin } from "react-icons/fa";
     
-
 const Footer = () => {
   return (
     <>
