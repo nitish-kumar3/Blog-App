@@ -7,6 +7,7 @@ import axios from "axios";
 import toast from "react-hot-toast";
 import { BACKEND_URL } from "../utils/utils";
 
+
 function Navbar() {
   const [show, setShow] = useState(false);
 
