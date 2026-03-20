@@ -7,7 +7,7 @@ const createTokenAndSaveCookies = async (userId, res) => {
   });
   res.cookie("jwt", token, {
     // httpOnly: true, // Temporarily set to false for testing //deploye se phle
-    
+
 
     // first step me package.json me nodemon ke node likhe (node index.js) or fir gitigonre banaye aur env and module ko isme likhe third step me yeha aaye httpOnly ko false kare aur sameSite ko none kare
     httpOnly: false, //deploye ke liye , false isliye kiye h kyuki frontend or backend dono alag alag domain pe h
