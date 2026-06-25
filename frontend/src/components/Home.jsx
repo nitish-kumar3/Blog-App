@@ -6,7 +6,6 @@ import Creator from "../Home/Creator";
 
 
 
-
 function Home() {
   return (
     <div>
