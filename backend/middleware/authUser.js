@@ -4,6 +4,7 @@ import jwt from "jsonwebtoken";
 
 
 
+
 //Authentication
 export const isAuthenticated = async (req, res, next) => {
   try { 
